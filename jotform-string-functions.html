@@ -1,51 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String Functions</title>
-    <script>
-        // This function will be called every time a field value changes
-        function updateStringFunctions() {
-            const inputStr = document.getElementById('#input_6').value;
-            
-            if(inputStr) {
-                const leftStr = inputStr.slice(0, 5);  // LEFT function (first 5 characters)
-                const rightStr = inputStr.slice(-5);  // RIGHT function (last 5 characters)
-                const midStr = inputStr.slice(3,7);  // MID function (characters from position 3 to 7)
-                
-                // Update the results dynamically
-                document.getElementById('resultLeft').innerText = 'LEFT(5): ' + leftStr;
-                document.getElementById('resultRight').innerText = 'RIGHT(5): ' + rightStr;
-                document.getElementById('resultMid').innerText = 'MID(3,7): ' + midStr;
-            }
-        }
-
-        // Automatically update the results whenever input fields change
-        document.addEventListener('DOMContentLoaded', function() {
-            const inputField = document.getElementById('inputString');
-            inputField.addEventListener('input', updateStringFunctions);  // Event listener for any input change
-        });
-    </script>
-</head>
-<body>
-    <script src="//js.jotform.com/JotFormCustomWidget.min.js"></script>
-    <script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = '//js.jotform.com/JotFormCustomWidget.min.js?onload=onLoadCallback';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-    <h1>String Manipulation Example</h1>
-    <form id="stringForm">
-        <label for="inputString">Enter a String:</label>
-        <input type="text" id="inputString" name="inputString" required><br><br>
-    </form>
-    <div id="results">
-        <p id="resultLeft">LEFT(5): </p>
-        <p id="resultRight">RIGHT(5): </p>
-        <p id="resultMid">MID(3,7): </p>
-    </div>
-</body>
+<html>
+    <head>
+        <script src="//js.jotform.com/JotFormCustomWidget.min.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <h3>This is my first widget.</h3>
+            <span id="labelText"></span>
+            <input type="text" id="userInput">
+        </div>
+        <script type="text/javascript">
+            //always subscribe to ready event and implement widget related code
+            //inside callback function , it is the best practice while developing widgets
+            JFCustomWidget.subscribe("ready", function(){
+                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
+                document.getElementById('labelText').innerHTML = label;
+                //subscribe to form submit event
+                JFCustomWidget.subscribe("submit", function(){
+                    var msg = {
+                        //you should valid attribute to data for JotForm
+                        //to be able to use youw widget as required
+                        valid: true,
+                        value: document.getElementById('userInput').value
+                    }
+                    // send value to JotForm
+                    JFCustomWidget.sendSubmit(msg);
+                });
+            });
+        </script>
+    </body>
 </html>
