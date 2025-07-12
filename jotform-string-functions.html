@@ -7,12 +7,12 @@
     <script>
         // This function will be called every time a field value changes
         function updateStringFunctions() {
-            const inputStr = document.getElementById('inputString').value;
+            const inputStr = document.getElementById('input6').value;
             
             if(inputStr) {
                 const leftStr = inputStr.slice(0, 5);  // LEFT function (first 5 characters)
                 const rightStr = inputStr.slice(-5);  // RIGHT function (last 5 characters)
-                const midStr = document.getElementById('#input_6');  // MID function (characters from position 3 to 7)
+                const midStr = inputStr.slice(3,7);  // MID function (characters from position 3 to 7)
                 
                 // Update the results dynamically
                 document.getElementById('resultLeft').innerText = 'LEFT(5): ' + leftStr;
