@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jotform with Widget</title>
+  <script src="https://form.jotform.com/jsform/251815192554055"></script>
+  <style>
+    iframe#widgetFrame { width: 100%; height: 300px; border: 1px solid #ccc; margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h2>My Form + Widget</h2>
+
+  <!-- Jotform loads in place via JS embed -->
+  <!-- Your widget -->
+  <iframe id="widgetFrame" src="https://phantompointtjones.github.io/jotform/jotform-string-functions.html"></iframe>
+
+  <script>
+    window.addEventListener("message", (event) => {
+      const msg = event.data;
+      if (!msg || typeof msg !== "string") return;
+
+      // Check for Jotform postMessage with form data
+      const matches = msg.match(/field\[([^\]]+)]="([^"]*)"/);
+      if (matches) {
+        const value = decodeURIComponent(matches[2]);
+
+        const widgetFrame = document.getElementById("widgetFrame");
+        widgetFrame.contentWindow.postMessage({ value }, "*");
+      }
+    });
+  </script>
+</body>
+</html>
