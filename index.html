@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Live MID Widget</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #mid-value {
+      font-size: 24px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h2>MID Value:</h2>
+  <div id="mid-value">Waiting for MID...</div>
+
+  <script>
+    window.addEventListener("message", function(event) {
+      // Ensure it's from JotForm
+      if (!event.origin.includes("jotform")) return;
+
+      // Get data string (e.g., "?MID=12345")
+      const messageData = event.data;
+
+      // Try to extract MID from the data
+      const match = messageData.match(/MID=([^&]*)/);
+      if (match && match[1]) {
+        const midValue = decodeURIComponent(match[1]);
+        document.getElementById("mid-value").textContent = midValue;
+      }
+    });
+  </script>
+</body>
+</html>
