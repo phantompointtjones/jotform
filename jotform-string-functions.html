@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Manipulation Widget</title>
     <script>
+        window.addEventListener("message", function(event) {
+    const data = event.data;
+    if (data.fullName) {
+        document.getElementById("inputString").value = data.fullName;
+        processString(data.fullName); // Your string handling function
+    }
+});
         // Function to receive data from JotForm and update the widget
         function updateFromJotForm(value) {
             document.getElementById("inputString").value = value; // Update input field in the widget
