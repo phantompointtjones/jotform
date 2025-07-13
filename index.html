@@ -20,20 +20,17 @@
   <div id="mid-value">Waiting for MID...</div>
 
   <script>
-    window.addEventListener("message", function(event) {
-      // Ensure it's from JotForm
-      if (!event.origin.includes("jotform")) return;
+    function getMIDFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("MID");
+    }
 
-      // Get data string (e.g., "?MID=12345")
-      const messageData = event.data;
+    function updateMID() {
+      const mid = getMIDFromURL();
+      document.getElementById("mid-value").textContent = mid ? mid : "No MID provided";
+    }
 
-      // Try to extract MID from the data
-      const match = messageData.match(/MID=([^&]*)/);
-      if (match && match[1]) {
-        const midValue = decodeURIComponent(match[1]);
-        document.getElementById("mid-value").textContent = midValue;
-      }
-    });
+    updateMID();
   </script>
 </body>
 </html>
