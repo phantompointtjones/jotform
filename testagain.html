@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>JotForm MID Sync Example</title>
+  <title>JotForm MID Sync Example3</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -107,7 +107,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
       }
 
       jotformMidField.addEventListener('input', function () {
-        externalField.value = mid(jotformMidField.value,2,4);
+        externalField.value = left(jotformMidField.value,5);
       });
     });
   </script>
