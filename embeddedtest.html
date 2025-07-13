@@ -1,4 +1,16 @@
 <script>window.enableEventObserver=true</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    //const quantityField = document.getElementById('input_5');
+    //const totalField = document.getElementById('input_6');
+
+    quantityField.addEventListener('input', function () {
+        //const quantity = parseInt(quantityField.value, 10) || 0;
+        //const unitPrice = 10; // example
+        totalField.value = "$" + (8 * 5).toFixed(2);
+    });
+});
+</script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/static/prototype.forms.js" type="text/javascript"></script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/static/jotform.forms.js" type="text/javascript"></script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/js/punycode-1.4.1.min.js" type="text/javascript" defer></script>
