@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script src="//js.jotform.com/JotFormCustomWidget.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>Live iFrame from JotForm Input</title>
+  <style>
+    iframe {
+      width: 600px;
+      height: 400px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+  <h2>JotForm Embedded</h2>
+  <!-- Embed your JotForm -->
+  <iframe id="jotform" src="https://form.jotform.com/251815192554055" width="100%" height="600" frameborder="0"></iframe>
 
-<div id="main">
-  <input type="text" id="mirroredValue" readonly> 
-</div>
+  <h2>Dynamic Iframe Reflecting Email</h2>
+  <!-- Dynamic iFrame -->
+  <iframe id="dynamicIframe" src="" allow="clipboard-write"></iframe>
 
-<script type="text/javascript">
-JFCustomWidget.subscribe("ready", function(){
-  // Listen for changes to the Jotform field with the specified name ('MID' in this case)
-  JFCustomWidget.listenFromField('#input_6', 'change', function(value) { // 1.11.4
-    // Update the value of the 'mirroredValue' input field within the widget
-    document.getElementById('mirroredValue').value = value;
-  });
-});
-</script>
+  <script>
+    window.addEventListener("message", function (event) {
+      // Confirm it's from JotForm
+      if (!event.origin.includes("jotform.com")) return;
 
+      const data = event.data;
+
+      if (typeof data === "string" && data.includes("email")) {
+        const emailMatch = data.match(/email=([^&]*)/);
+        if (emailMatch && emailMatch[1]) {
+          const email = decodeURIComponent(emailMatch[1]);
+          document.getElementById("dynamicIframe").src =
+            "https://github.com/phantompointtjones/jotform/mirrorfield.html?email=" + email;
+        }
+      }
+    });
+  </script>
 </body>
 </html>
