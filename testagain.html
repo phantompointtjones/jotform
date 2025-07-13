@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <h2>JotForm Field Sync33</h2>
+  <h2>JotForm Field Sync333</h2>
 
   <!-- External field that syncs with JotForm's MID field -->
   <label for="copied_mid">Copied MID Field:</label>
@@ -34,6 +34,8 @@
 <script>window.enableEventObserver=true</script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/static/prototype.forms.js" type="text/javascript"></script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/static/jotform.forms.js" type="text/javascript"></script>
+<script src="https://cdn.jotfor.ms/s/static/a8f2017c497/js/punycode-1.4.1.min.js" type="text/javascript" defer></script>
+<script src="https://cdn.jotfor.ms/s/static/a8f2017c497/js/vendor/math-processor.js" type="text/javascript"></script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/js/vendor/smoothscroll.min.js" type="text/javascript"></script>
 <script src="https://cdn.jotfor.ms/s/static/a8f2017c497/js/errorNavigation.js" type="text/javascript"></script>
 <script type="text/javascript">	JotForm.newDefaultTheme = true;
@@ -47,19 +49,26 @@
 	JotForm.replaceTagTest = true;
 	JotForm.activeRedirect = "thanktext";
 	JotForm.uploadServerURL = "https://upload.jotform.com/upload";
-	JotForm.clearFieldOnHide="disable";
+
+   JotForm.setCalculations([{"allowZeroCopy":"1","decimalPlaces":"2","equation":"[({22}*{16})+({22}*{31})+({22}*{27})+({37}*{34})+({37}*{34}+({38}*{39})+{12}]","ignoreHiddenFields":"0","insertAsText":"0","newCalculationType":"1","operands":"22,16,31,27,37,34,38,39,12","readOnly":"0","replaceText":"","resultField":"15","showBeforeInput":"0","showEmptyDecimals":"0","useCommasForDecimals":"0"},{"allowZeroCopy":"1","decimalPlaces":"2","equation":"=left([{16}],10)","ignoreHiddenFields":"0","insertAsText":"0","newCalculationType":"1","operands":"16","readOnly":"0","replaceText":"","resultField":"46","showBeforeInput":"0","showEmptyDecimals":"0","useCommasForDecimals":"0"},{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"6","equation":"{6}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752435288038","resultField":"77","decimalPlaces":"2","isError":false,"conditionId":"1752435306156","conditionTrue":false,"baseField":"6"},{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"27","equation":"{27}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752177330623","resultField":"45","decimalPlaces":"2","isError":false,"conditionId":"1752177366446","conditionTrue":false,"baseField":"27"},{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"31","equation":"{31}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752177311822","resultField":"44","decimalPlaces":"2","isError":false,"conditionId":"1752177327600","conditionTrue":false,"baseField":"31"},{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"16","equation":"{16}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752177206408","resultField":"43","decimalPlaces":"2","isError":false,"conditionId":"1752177224392","conditionTrue":false,"baseField":"16"}]);
+   JotForm.setConditions([{"action":[{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"6","equation":"{6}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752435288038","resultField":"77","decimalPlaces":"2","isError":false,"conditionId":"1752435306156","conditionTrue":false,"baseField":"6"}],"id":"1752435306156","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1752435288038","field":"6","operator":"isFilled","value":"","isError":false}],"type":"calculation"},{"action":[{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"27","equation":"{27}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752177330623","resultField":"45","decimalPlaces":"2","isError":false,"conditionId":"1752177366446","conditionTrue":false,"baseField":"27"}],"id":"1752177366446","index":"1","link":"Any","priority":"1","terms":[{"id":"term_1752177330623","field":"27","operator":"isFilled","value":"","isError":false}],"type":"calculation"},{"action":[{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"31","equation":"{31}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752177311822","resultField":"44","decimalPlaces":"2","isError":false,"conditionId":"1752177327600","conditionTrue":false,"baseField":"31"}],"id":"1752177327600","index":"2","link":"Any","priority":"2","terms":[{"id":"term_1752177311822","field":"31","operator":"isFilled","value":"","isError":false}],"type":"calculation"},{"action":[{"replaceText":"","readOnly":false,"newCalculationType":true,"allowZeroCopy":true,"useCommasForDecimals":false,"operands":"16","equation":"{16}","showBeforeInput":false,"showEmptyDecimals":false,"ignoreHiddenFields":false,"insertAsText":false,"id":"action_1752177206408","resultField":"43","decimalPlaces":"2","isError":false,"conditionId":"1752177224392","conditionTrue":false,"baseField":"16"}],"id":"1752177224392","index":"3","link":"Any","priority":"3","terms":[{"id":"term_1752177206408","field":"16","operator":"isFilled","value":"","isError":false}],"type":"calculation"}]);	JotForm.clearFieldOnHide="disable";
 	JotForm.submitError="jumpToFirstError";
 	JotForm.isFullSource = true;
 
 	JotForm.init(function(){
 	/*INIT-START*/
 if (window.JotForm && JotForm.accessible) $('input_3').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_8').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_6').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_43').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_44').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_45').setAttribute('tabindex',0);
       JotForm.alterTexts({"ageVerificationError":"You must be older than {minAge} years old to submit this form.","alphabetic":"This field can only contain letters","alphanumeric":"This field can only contain letters and numbers.","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccInvalidNumber":"Credit Card Number is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingDonation":"Please enter numeric values for donation amount.","ccMissingProduct":"Please select at least one product.","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","chooseAFile_infoMessage":"Choose a file","confirmClearForm":"Are you sure you want to clear the form","confirmEmail":"E-mail does not match","confirmSelection":"Confirm Selection","currency":"This field can only contain currency values.","cyrillic":"This field can only contain cyrillic characters","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","dateLimited":"This date is unavailable.","disallowDecimals":"Please enter a whole number.","doneButton":"Done","doneMessage":"Well done! All errors are fixed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","email":"Enter a valid e-mail address","error":"Error","fieldError":"field has an error.","fillMask":"Field value must fill mask.","formerSelectedTime":"Former Time","freeEmailError":"Free email accounts are not allowed","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoNotAvailableTitle":"Position Unavailable","geoPermissionDesc":"Check your browser's privacy settings.","geoPermissionTitle":"Permission Denied","geoTimeoutDesc":"Please check your internet connection and try again.","geoTimeoutTitle":"Timeout","gradingScoreError":"Score total should only be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","invalidTime":"Enter a valid time","justSoldOut":"Just Sold Out","lessThan":"Your score should be less than or equal to","maxCharactersError":"The number of characters should not be more than the maximum value:","maxDigitsError":"The maximum digits allowed is","maxFileSize_infoMessage":"Max. file size","maxSelectionsError":"The maximum number of selections allowed is ","minCharactersError":"The number of characters should not be less than the minimum value:","minSelectionsError":"The minimum required number of selections is ","multipleError":"There are {count} errors on this page. Please correct them before moving on.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","nextButtonText":"Next","noSlotsAvailable":"No slots available","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"This field can only contain numeric values","oneError":"There is {count} error on this page. Please correct it before moving on.","pastDatesDisallowed":"Date must not be in the past.","pleaseWait":"Please wait...","prevButtonText":"Previous","progressMiddleText":"of","required":"This field is required.","requiredLegend":"All fields marked with * are required and must be filled.","requireEveryCell":"Every cell is required.","requireEveryRow":"Every row is required.","requireOne":"At least one field required.","restrictedDomain":"This domain is not allowed","reviewBackText":"Back to Form","reviewSubmitText":"Review and Submit","seeAllText":"See All","seeErrorsButton":"See Errors","selectedTime":"Selected Time","selectionSoldOut":"Selection Sold Out","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","soldOut":"Sold Out","startButtonText":"START","submissionLimit":"Sorry! Only one entry is allowed. &lt;br&gt; Multiple submissions are disabled for this form.","submitButtonText":"Submit","subProductItemsLeft":"({count} items left)","uploadExtensions":"You can only upload following files:","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","url":"This field can only contain a valid URL","validateEmail":"You need to validate this e-mail","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is"});
 	/*INIT-END*/
 	});
 
    setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","name":"test","qid":"3","subLabel":"","text":"test","type":"control_textbox"}]);}, 20); 
+JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"POS \u002F Network Installation Request","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","mde":"No","name":"businessName","qid":"3","subLabel":"","text":"Business Name","type":"control_textarea","wysiwyg":"Disable"},{"description":"","name":"contactInformation","qid":"4","text":"Contact Information","type":"control_fullname"},{"description":"","name":"billingAddress","qid":"5","text":"Billing Address","type":"control_address"},{"description":"","name":"mid","qid":"6","subLabel":"","text":"MID","type":"control_textbox"},null,{"description":"","name":"dba","qid":"8","subLabel":"","text":"DBA","type":"control_textbox"},null,null,{"description":"","name":"onsiteInstallation","qid":"11","text":"Onsite Installation","type":"control_radio"},{"description":"","name":"networkBundle","qid":"12","subLabel":"","text":"Network Bundle","type":"control_dropdown"},null,null,{"description":"","name":"quoteTotal","qid":"15","subLabel":"","text":"Quote Total","type":"control_calculation"},{"description":"","name":"terminalConfiguration","qid":"16","subLabel":"","text":"Terminal Configuration","type":"control_dropdown"},null,{"name":"divider18","qid":"18","text":"Divider","type":"control_divider"},{"name":"terminalOptions","qid":"19","text":"Terminal Options","type":"control_head"},{"name":"networkOptions","qid":"20","text":"Network Options","type":"control_head"},{"name":"divider21","qid":"21","text":"Divider","type":"control_divider"},{"description":"","name":"numberOf22","qid":"22","subLabel":"","text":"Number of Terminals","type":"control_number"},{"name":"installationOptions","qid":"23","text":"Installation Options","type":"control_head"},{"description":"","name":"shippingAddress","qid":"24","text":"Shipping Address","type":"control_address"},null,{"description":"","name":"billingAnd","qid":"26","text":"Billing and Shipping Address is the same","type":"control_checkbox"},{"description":"","name":"cashDrawer","qid":"27","subLabel":"","text":"Cash Drawer","type":"control_dropdown"},null,{"name":"input29","qid":"29","text":"Terminal Options","type":"control_text"},{"name":"ltpgtltaHrefhttpswwwtestcom","qid":"30","text":"Installation options","type":"control_text"},{"description":"","name":"terminalPrinter","qid":"31","subLabel":"","text":"Terminal Printer","type":"control_dropdown"},{"name":"divider32","qid":"32","text":"Divider","type":"control_divider"},{"name":"kitchenOptions","qid":"33","text":"Kitchen Options","type":"control_head"},{"description":"","name":"kdsTerminal","qid":"34","subLabel":"","text":"KDS Terminal Configuration","type":"control_dropdown"},{"description":"","name":"kdsMount","qid":"35","subLabel":"","text":"KDS Mount","type":"control_dropdown"},{"name":"divider","qid":"36","text":"Divider","type":"control_divider"},{"description":"","name":"numberOf","qid":"37","subLabel":"","text":"Number of KDS","type":"control_number"},{"description":"","name":"numberOf38","qid":"38","subLabel":"","text":"Number of Kitchen Printers","type":"control_number"},{"description":"","name":"kitchenPrinter","qid":"39","subLabel":"","text":"Kitchen Printer","type":"control_dropdown"},{"name":"ltpgtltaHrefhttpswwwtestcom40","qid":"40","text":"Kitchen Options","type":"control_text"},{"name":"ltpgtltaHrefhttpswwwtestcom41","qid":"41","text":"Network Options","type":"control_text"},{"name":"input42","qid":"42","text":"Terminal, Printer, and Cash Drawer Colors ARE NOT THE SAME.","type":"control_text"},{"description":"","name":"terminalConfiguration43","qid":"43","subLabel":"","text":"Terminal Configuration Text","type":"control_textbox"},{"description":"","name":"terminalPrinter44","qid":"44","subLabel":"","text":"Terminal Printer Text","type":"control_textbox"},{"description":"","name":"typeA45","qid":"45","subLabel":"","text":"Cash Drawer Text","type":"control_textbox"},{"description":"","name":"calculation","qid":"46","subLabel":"","text":"Calculation","type":"control_calculation"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"email","qid":"74","subLabel":"example@example.com","text":"Email","type":"control_email"}]);}, 20); 
 </script>
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/stylebuilder/static/form-common.css?v=87bd99f
 "/>
@@ -67,11 +76,356 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.63993"/>
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_styles.css?3.3.63993" />
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_feature.css?3.3.63993" />
-<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/251937898572073" method="post" name="form_251937898572073" id="251937898572073" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="251937898572073" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1752448490912" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="submitDate" name="submitDate" value="undefined" /><input type="hidden" id="buildDate" name="buildDate" value="1752448490912" /><input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" /><input type="hidden" name="eventObserver" value="1" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #FFFFFF;
+    }
+  
+    .form-all {
+      color: #2C3345;
+    }
+    .form-header-group .form-header {
+      color: #2C3345;
+    }
+    .form-header-group .form-subHeader {
+      color: #2C3345;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #2C3345;
+    }
+    .form-sub-label {
+      color: #464d5f;
+    }
+  
+  .supernova {
+    background-color: #F3F3FE;
+  }
+  .supernova body {
+    background: transparent;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: undefined;
+    }
+  
+      
+    .supernova {
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+      background-position: center top;
+    }
+
+      .supernova, #stage {
+        background-image: none;
+      }
+    
+      .form-all {
+        background-image: none;
+      }
+    /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/251815192554055" method="post" name="form_251815192554055" id="251815192554055" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="251815192554055" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1752450306681" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="submitDate" name="submitDate" value="undefined" /><input type="hidden" id="buildDate" name="buildDate" value="1752450306681" /><input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" /><input type="hidden" name="eventObserver" value="1" />
   <div role="main" class="form-all">
     <ul class="form-section page-section" role="presentation">
-      <li class="form-line" data-type="control_textbox" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false"> test </label>
-        <div id="cid_3" class="form-input-wide" data-layout="half"> <input type="text" id="input_3" name="q3_test" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_3" value="" /> </div>
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httal htvam">
+            <h1 id="header_1" class="form-header" data-component="header">POS / Network Installation Request</h1>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false"> Business Name </label>
+        <div id="cid_3" class="form-input-wide" data-layout="full"> <textarea id="input_3" class="form-textarea" name="q3_businessName" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_3"></textarea> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_8"><label class="form-label form-label-top form-label-auto" id="label_8" for="input_8" aria-hidden="false"> DBA </label>
+        <div id="cid_8" class="form-input-wide" data-layout="half"> <input type="text" id="input_8" name="q8_dba" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_8" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_6"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6" aria-hidden="false"> MID </label>
+        <div id="cid_6" class="form-input-wide" data-layout="half"> <input type="text" id="input_6" name="q6_mid" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_6" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_74"><label class="form-label form-label-top form-label-auto" id="label_74" for="input_74" aria-hidden="false"> Email </label>
+        <div id="cid_74" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_74" name="q74_email" class="form-textbox validate[Email]" data-defaultvalue="" autoComplete="section-input_74 email" style="width:310px" size="310" data-component="email" aria-labelledby="label_74 sublabel_input_74" value="" /><label class="form-sub-label" for="input_74" id="sublabel_input_74" style="min-height:13px">example@example.com</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_5" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5_addr_line1" aria-hidden="false"> Billing Address </label>
+        <div id="cid_5" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_5_addr_line1" name="q5_billingAddress[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_5 address-line1" data-component="address_line_1" aria-labelledby="label_5 sublabel_5_addr_line1" value="" /><label class="form-sub-label" for="input_5_addr_line1" id="sublabel_5_addr_line1" style="min-height:13px">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_5_addr_line2" name="q5_billingAddress[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_5 address-line2" data-component="address_line_2" aria-labelledby="label_5 sublabel_5_addr_line2" value="" /><label class="form-sub-label" for="input_5_addr_line2" id="sublabel_5_addr_line2" style="min-height:13px">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_5_city" name="q5_billingAddress[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_5 address-level2" data-component="city" aria-labelledby="label_5 sublabel_5_city" value="" /><label class="form-sub-label" for="input_5_city" id="sublabel_5_city" style="min-height:13px">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_5_state" name="q5_billingAddress[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_5 address-level1" data-component="state" aria-labelledby="label_5 sublabel_5_state" value="" /><label class="form-sub-label" for="input_5_state" id="sublabel_5_state" style="min-height:13px">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_5_postal" name="q5_billingAddress[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_5 postal-code" data-component="zip" aria-labelledby="label_5 sublabel_5_postal" value="" /><label class="form-sub-label" for="input_5_postal" id="sublabel_5_postal" style="min-height:13px">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_24" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_24" for="input_24_addr_line1" aria-hidden="false"> Shipping Address </label>
+        <div id="cid_24" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_24_addr_line1" name="q24_shippingAddress[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_24 address-line1" data-component="address_line_1" aria-labelledby="label_24 sublabel_24_addr_line1" value="" /><label class="form-sub-label" for="input_24_addr_line1" id="sublabel_24_addr_line1" style="min-height:13px">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_24_addr_line2" name="q24_shippingAddress[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_24 address-line2" data-component="address_line_2" aria-labelledby="label_24 sublabel_24_addr_line2" value="" /><label class="form-sub-label" for="input_24_addr_line2" id="sublabel_24_addr_line2" style="min-height:13px">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_24_city" name="q24_shippingAddress[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_24 address-level2" data-component="city" aria-labelledby="label_24 sublabel_24_city" value="" /><label class="form-sub-label" for="input_24_city" id="sublabel_24_city" style="min-height:13px">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_24_state" name="q24_shippingAddress[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_24 address-level1" data-component="state" aria-labelledby="label_24 sublabel_24_state" value="" /><label class="form-sub-label" for="input_24_state" id="sublabel_24_state" style="min-height:13px">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_24_postal" name="q24_shippingAddress[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_24 postal-code" data-component="zip" aria-labelledby="label_24 sublabel_24_postal" value="" /><label class="form-sub-label" for="input_24_postal" id="sublabel_24_postal" style="min-height:13px">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="first_4" aria-hidden="false"> Contact Information </label>
+        <div id="cid_4" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_4" name="q4_contactInformation[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 given-name" size="10" data-component="first" aria-labelledby="label_4 sublabel_4_first" value="" /><label class="form-sub-label" for="first_4" id="sublabel_4_first" style="min-height:13px">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_4" name="q4_contactInformation[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" data-component="last" aria-labelledby="label_4 sublabel_4_last" value="" /><label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_21">
+        <div id="cid_21" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_checkbox" id="id_26"><label class="form-label form-label-top form-label-auto" id="label_26" for="input_26_0" aria-hidden="false"> Billing and Shipping Address is the same </label>
+        <div id="cid_26" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_26" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_26" type="checkbox" class="form-checkbox" id="input_26_0" name="q26_billingAnd[]" value="Yes" /><label id="label_input_26_0" for="input_26_0">Yes</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_18">
+        <div id="cid_18" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li id="cid_19" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_19" class="form-header" data-component="header">Terminal Options</h2>
+            <div id="subHeader_19" class="form-subHeader">If customer is requesting a combination of terminal options custom quoting is required.</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_29">
+        <div id="cid_29" class="form-input-wide" data-layout="full">
+          <div id="text_29" class="form-html" data-component="text" tabindex="-1">
+            <p><a href="https://www.test.com" target="_blank" rel="nofollow">Terminal Options</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_number" id="id_22"><label class="form-label form-label-top form-label-auto" id="label_22" for="input_22" aria-hidden="false"> Number of Terminals </label>
+        <div id="cid_22" class="form-input-wide" data-layout="half"> <input type="number" id="input_22" name="q22_numberOf22" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:310px" size="310" placeholder="e.g., 23" data-component="number" aria-labelledby="label_22" step="any" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_16"><label class="form-label form-label-top form-label-auto" id="label_16" for="input_16" aria-hidden="false"> Terminal Configuration </label>
+        <div id="cid_16" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_16" name="q16_terminalConfiguration" style="width:310px" data-component="dropdown" aria-label="Terminal Configuration">
+            <option value="">Please Select</option>
+            <option value="2021 Apple iPad Mini Wi-Fi 256GB - Space Gray 6th Generation - $449.01 - Available:  0">2021 Apple iPad Mini Wi-Fi 256GB - Space Gray 6th Generation - $449.01 - Available: 0</option>
+            <option value="IPAD9 64SG - $299.99 - Available:  1">IPAD9 64SG - $299.99 - Available: 1</option>
+            <option value="2021 Apple 10.2-inch iPad Wi-Fi 64GB - Space Gray (9th Generation) - $299.99 - Available:  2">2021 Apple 10.2-inch iPad Wi-Fi 64GB - Space Gray (9th Generation) - $299.99 - Available: 2</option>
+            <option value="Elite Evo Floor Std - iPadPro 9.7 - iPad Air (2nd Gen) - Black - $287.95 - CALL FOR AVAILABILITY">Elite Evo Floor Std - iPadPro 9.7 - iPad Air (2nd Gen) - Black - $287.95 - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Fixed Stand 10.9&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Fixed Stand 10.9&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Fixed Stand 11&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Fixed Stand 11&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Fixed Stand 13&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Fixed Stand 13&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Swivel Stand 10.9&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Swivel Stand 10.9&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Swivel Stand 11&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Swivel Stand 11&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Swivel Stand 13&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Swivel Stand 13&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Touch Stand 10.9&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Touch Stand 10.9&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Touch Stand 11&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Touch Stand 11&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="Black IOS Aldelo Express Terminal Touch Stand 13&quot;
+ - $ - CALL FOR AVAILABILITY">Black IOS Aldelo Express Terminal Touch Stand 13&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+            <option value="White IOS Aldelo Express Terminal Fixed Stand 10.9&quot;
+ - $ - CALL FOR AVAILABILITY">White IOS Aldelo Express Terminal Fixed Stand 10.9&quot;
+              - $ - CALL FOR AVAILABILITY</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_calculation" id="id_46"><label class="form-label form-label-top form-label-auto" id="label_46" for="input_46" aria-hidden="false"> Calculation </label>
+        <div id="cid_46" class="form-input-wide" data-layout="half"> <input aria-labelledby="label_46" data-component="calculation" type="text" data-defaultvalue="0" class="form-textbox" data-type="input-textbox" id="input_46" name="q46_calculation" size="20" value="0" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_43"><label class="form-label form-label-top form-label-auto" id="label_43" for="input_43" aria-hidden="false"> Terminal Configuration Text </label>
+        <div id="cid_43" class="form-input-wide" data-layout="half"> <input type="text" id="input_43" name="q43_terminalConfiguration43" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_43" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_31"><label class="form-label form-label-top form-label-auto" id="label_31" for="input_31" aria-hidden="false"> Terminal Printer </label>
+        <div id="cid_31" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_31" name="q31_terminalPrinter" style="width:310px" data-component="dropdown" aria-label="Terminal Printer">
+            <option data-calcvalue="0" value="">Please Select</option>
+            <option data-calcvalue="249.99" value="Epson Epson TM-M30II Network Tethering Receipt Printer USB &amp; Ethernet. Black (C31CJ95022) - $249.99 - Available:  1">Epson Epson TM-M30II Network Tethering Receipt Printer USB &amp; Ethernet. Black (C31CJ95022) - $249.99 - Available: 1</option>
+            <option value="Black Receipt Printer - $ - CALL FOR AVAILABILITY">Black Receipt Printer - $ - CALL FOR AVAILABILITY</option>
+            <option value="White Receipt Printer - $ - CALL FOR AVAILABILITY">White Receipt Printer - $ - CALL FOR AVAILABILITY</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_44"><label class="form-label form-label-top form-label-auto" id="label_44" for="input_44" aria-hidden="false"> Terminal Printer Text </label>
+        <div id="cid_44" class="form-input-wide" data-layout="half"> <input type="text" id="input_44" name="q44_terminalPrinter44" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_44" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_27"><label class="form-label form-label-top form-label-auto" id="label_27" for="input_27" aria-hidden="false"> Cash Drawer </label>
+        <div id="cid_27" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_27" name="q27_cashDrawer" style="width:310px" data-component="dropdown" aria-label="Cash Drawer">
+            <option data-calcvalue="0" value="">Please Select</option>
+            <option data-calcvalue="95.61" value="16inch 5 bill round corner cash drawer - $95.61 - Available:  -1">16inch 5 bill round corner cash drawer - $95.61 - Available: -1</option>
+            <option data-calcvalue="129.99" value="Logic Controls CR3000E Cash Drawer - $129.99 - CALL FOR AVAILABILITY">Logic Controls CR3000E Cash Drawer - $129.99 - CALL FOR AVAILABILITY</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_45"><label class="form-label form-label-top form-label-auto" id="label_45" for="input_45" aria-hidden="false"> Cash Drawer Text </label>
+        <div id="cid_45" class="form-input-wide" data-layout="half"> <input type="text" id="input_45" name="q45_typeA45" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_45" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_32">
+        <div id="cid_32" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden" data-type="control_text" id="id_42">
+        <div id="cid_42" class="form-input-wide always-hidden" data-layout="full">
+          <div id="text_42" class="form-html" data-component="text" tabindex="-1">
+            <p><span style="font-size: 14pt;"><strong><span style="color: #ea3223;">Terminal, Printer, and Cash Drawer Colors ARE NOT THE SAME.</span></strong></span></p>
+          </div>
+        </div>
+      </li>
+      <li id="cid_33" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_33" class="form-header" data-component="header">Kitchen Options</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_40">
+        <div id="cid_40" class="form-input-wide" data-layout="full">
+          <div id="text_40" class="form-html" data-component="text" tabindex="-1">
+            <p><a href="https://www.test.com" target="_blank" rel="nofollow">Kitchen Options</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_number" id="id_37"><label class="form-label form-label-top form-label-auto" id="label_37" for="input_37" aria-hidden="false"> Number of KDS </label>
+        <div id="cid_37" class="form-input-wide" data-layout="half"> <input type="number" id="input_37" name="q37_numberOf" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:310px" size="310" placeholder="e.g., 23" data-component="number" aria-labelledby="label_37" step="any" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_34"><label class="form-label form-label-top form-label-auto" id="label_34" for="input_34" aria-hidden="false"> KDS Terminal Configuration </label>
+        <div id="cid_34" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_34" name="q34_kdsTerminal" style="width:310px" data-component="dropdown" aria-label="KDS Terminal Configuration">
+            <option value="">Please Select</option>
+            <option value=""></option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_35"><label class="form-label form-label-top form-label-auto" id="label_35" for="input_35" aria-hidden="false"> KDS Mount </label>
+        <div id="cid_35" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_35" name="q35_kdsMount" style="width:310px" data-component="dropdown" aria-label="KDS Mount">
+            <option value="">Please Select</option>
+            <option value=""></option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_number" id="id_38"><label class="form-label form-label-top form-label-auto" id="label_38" for="input_38" aria-hidden="false"> Number of Kitchen Printers </label>
+        <div id="cid_38" class="form-input-wide" data-layout="half"> <input type="number" id="input_38" name="q38_numberOf38" data-type="input-number" class=" form-number-input form-textbox" data-defaultvalue="" style="width:310px" size="310" placeholder="e.g., 23" data-component="number" aria-labelledby="label_38" step="any" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_39"><label class="form-label form-label-top form-label-auto" id="label_39" for="input_39" aria-hidden="false"> Kitchen Printer </label>
+        <div id="cid_39" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_39" name="q39_kitchenPrinter" style="width:310px" data-component="dropdown" aria-label="Kitchen Printer">
+            <option value="">Please Select</option>
+            <option value=""></option>
+          </select> </div>
+      </li>
+      <li id="cid_20" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_20" class="form-header" data-component="header">Network Options</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_41">
+        <div id="cid_41" class="form-input-wide" data-layout="full">
+          <div id="text_41" class="form-html" data-component="text" tabindex="-1">
+            <p><a href="https://www.test.com" target="_blank" rel="nofollow">Network Options</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" for="input_12" aria-hidden="false"> Network Bundle </label>
+        <div id="cid_12" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_12" name="q12_networkBundle" style="width:310px" data-component="dropdown" aria-label="Network Bundle">
+            <option data-calcvalue="0" value="">Please Select</option>
+            <option data-calcvalue="102.99" value="NSM5-US Nano Station MIMO 5 GHz USA version - $102.99 - Available:  1">NSM5-US Nano Station MIMO 5 GHz USA version - $102.99 - Available: 1</option>
+            <option data-calcvalue="79.99" value="HP 1405-8G Switch - 8 Ports - 8 x RJ-45 - 10/100/1000Base-T - Desktop - $79.99 - Available:  2">HP 1405-8G Switch - 8 Ports - 8 x RJ-45 - 10/100/1000Base-T - Desktop - $79.99 - Available: 2</option>
+            <option data-calcvalue="2032.21" value="Network Starter Bundle 100 - $2032.21 - CALL FOR AVAILABILITY">Network Starter Bundle 100 - $2032.21 - CALL FOR AVAILABILITY</option>
+          </select> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_36">
+        <div id="cid_36" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li id="cid_23" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_23" class="form-header" data-component="header">Installation Options</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_30">
+        <div id="cid_30" class="form-input-wide" data-layout="full">
+          <div id="text_30" class="form-html" data-component="text" tabindex="-1">
+            <p><a href="https://www.test.com" target="_blank" rel="nofollow">Installation options</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" aria-hidden="false"> Onsite Installation </label>
+        <div id="cid_11" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_11" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_11" type="radio" class="form-radio" id="input_11_0" name="q11_onsiteInstallation" value="Yes" /><label id="label_input_11_0" for="input_11_0">Yes</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_11" type="radio" class="form-radio" id="input_11_1" name="q11_onsiteInstallation" value="No" /><label id="label_input_11_1" for="input_11_1">No</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_calculation" id="id_15"><label class="form-label form-label-top form-label-auto" id="label_15" for="input_15" aria-hidden="false"> Quote Total </label>
+        <div id="cid_15" class="form-input-wide" data-layout="half"> <input aria-labelledby="label_15" data-component="calculation" type="text" data-defaultvalue="0" class="form-textbox" data-type="input-textbox" id="input_15" name="q15_quoteTotal" size="20" value="0" /> </div>
       </li>
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide" data-layout="full">
@@ -86,19 +440,22 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
   </script>
   <script>
     JotForm.poweredByText = "Powered by Jotform";
-  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="251937898572073" />
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="251815192554055" />
   <script type="text/javascript">
-    var all_spc = document.querySelectorAll("form[id='251937898572073'] .si" + "mple" + "_spc");
+    var all_spc = document.querySelectorAll("form[id='251815192554055'] .si" + "mple" + "_spc");
     for (var i = 0; i < all_spc.length; i++)
     {
-      all_spc[i].value = "251937898572073-251937898572073";
+      all_spc[i].value = "251815192554055-251815192554055";
     }
   </script>
 </form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
 
+
+
+	<!-- ✅ JotForm Full Source Code END -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const jotformMidField = document.getElementById('input_3');
+      const jotformMidField = document.getElementById('input_16');
       const externalField = document.getElementById('copied_mid');
 
       if (!jotformMidField || !externalField) {
