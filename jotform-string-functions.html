@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="//js.jotform.com/JotFormCustomWidget.min.js"></script>
-    </head>
-    <body>
-        <div id="main">
-            <h3>This is my first widget.</h3>
-            <span id="labelText"></span>
-            <input type="text" id="userInput">
-        </div>
-        <script type="text/javascript">
-            //always subscribe to ready event and implement widget related code
-            //inside callback function , it is the best practice while developing widgets
-            JFCustomWidget.subscribe("ready", function(){
-                var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('labelText').innerHTML = label;
-                //subscribe to form submit event
-                JFCustomWidget.subscribe("submit", function(){
-                    var msg = {
-                        //you should valid attribute to data for JotForm
-                        //to be able to use youw widget as required
-                        valid: true,
-                        value: document.getElementById('userInput').value
-                    }
-                    // send value to JotForm
-                    JFCustomWidget.sendSubmit(msg);
-                });
-            });
-        </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation Widget</title>
+    <script>
+        // Function to receive data from JotForm and update the widget
+        function updateFromJotForm(value) {
+            document.getElementById("inputString").value = value; // Update input field in the widget
+            processString(value);  // Process the string
+        }
+
+        // Process the string value (Example: LEFT, RIGHT, MID)
+        function processString(input) {
+            const leftStr = input.slice(0, 5);
+            const rightStr = input.slice(-5);
+            const midStr = input.slice(2, 7);
+
+            document.getElementById("resultLeft").textContent = `LEFT(5): ${leftStr}`;
+            document.getElementById("resultRight").textContent = `RIGHT(5): ${rightStr}`;
+            document.getElementById("resultMid").textContent = `MID(3,7): ${midStr}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>String Manipulation</h1>
+    <input type="text" id="inputString" placeholder="Enter string here" oninput="processString(this.value)">
+    <div id="results">
+        <p id="resultLeft">LEFT(5): </p>
+        <p id="resultRight">RIGHT(5): </p>
+        <p id="resultMid">MID(3,7): </p>
+    </div>
+</body>
 </html>
