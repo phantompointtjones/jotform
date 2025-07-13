@@ -26,8 +26,8 @@
       if (typeof message === "string" && message.startsWith("{")) {
         try {
           const data = JSON.parse(message);
-          const mid = data.MID;
-          document.getElementById("mid").textContent = mid || "No MID provided";
+          const mid = data.#input_6;
+          document.getElementById("#input_6").textContent = mid || "No MID provided";
         } catch (err) {
           console.error("Error parsing message:", err);
         }
