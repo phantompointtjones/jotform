@@ -25,7 +25,7 @@
     window.addEventListener("message", (event) => {
       const { value } = event.data || {};
       if (value) {
-        document.getElementById("fieldValue").value = value;
+        document.getElementById("#input_6").value = value;
         document.getElementById("result").innerText = processString(value);
       }
     });
