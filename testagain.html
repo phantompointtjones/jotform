@@ -107,7 +107,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Sub
       }
 
       jotformMidField.addEventListener('input', function () {
-        externalField.value = jotformMidField.value;
+        externalField.value = mid(jotformMidField.value,2,4);
       });
     });
   </script>
