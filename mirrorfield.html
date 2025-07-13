@@ -12,7 +12,7 @@
 <script type="text/javascript">
 JFCustomWidget.subscribe("ready", function(){
   // Listen for changes to the Jotform field with the specified name ('MID' in this case)
-  JFCustomWidget.listenFromField('MID', 'change', function(value) { // 1.11.4
+  JFCustomWidget.listenFromField('input_6', 'change', function(value) { // 1.11.4
     // Update the value of the 'mirroredValue' input field within the widget
     document.getElementById('mirroredValue').value = value;
   });
