@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Live MID Widget 2</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #mid-value {
+      font-size: 24px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h2>MID Value 2:</h2>
+  <div id="mid-value">Waiting for MID...</div>
+
+  <script>
+    function getMIDFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("MID");
+    }
+
+    function updateMID() {
+      const mid = getMIDFromURL();
+      document.getElementById("mid-value").textContent = mid ? mid : "No MID provided";
+    }
+
+    updateMID();
+  </script>
+</body>
+</html>
