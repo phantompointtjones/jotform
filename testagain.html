@@ -20,14 +20,24 @@
     }
   </style>
 </head>
+<style>
+.sticky-sync-box {
+  position: sticky;
+  top: 10px; /* Distance from top of screen */
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 999;
+}
+</style>
 <body>
-
-  <h2>JotForm Field Sync7</h2>
+<div class="sticky-sync-box">
+  <h2>JotForm Field Sync8</h2>
 
   <!-- External field that syncs with JotForm's MID field -->
   <label for="copied_mid">Copied MID Field:</label>
   <input type="text" id="copied_mid" readonly />
-
+</div>
   <hr>
 
   <!-- ✅ JotForm Full Source Code Goes Below -->
