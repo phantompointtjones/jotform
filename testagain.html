@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <h2>JotForm Field Sync6</h2>
+  <h2>JotForm Field Sync7</h2>
 
   <!-- External field that syncs with JotForm's MID field -->
   <label for="copied_mid">Copied MID Field:</label>
@@ -468,7 +468,10 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"POS \u00
 	      if (DollarIndex !== -1) {
 		const AfterDollar = jotformMidField.value.substring(DollarIndex + 1).trim();
 		const numericValue = AfterDollar.match(/[\d.]+/)?.[0] || '';
-		externalField.value = numericValue;
+		if (numericValue == ''){
+			externalField.value = '0';}
+		      else {
+		externalField.value = numericValue;}
 	}
       	else {
 	      externalField.value = '0';
